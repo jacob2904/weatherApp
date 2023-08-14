@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div *ngFor="let weather of weatherData" class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body text-center">
+          <p class="card-text">{{ weather.dt_txt | date:'mediumDate' }}</p>
+          <img [src]="'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'" alt="Weather Icon" class="mb-3">
+          <p class="card-text">{{ weather.weather[0].description }}</p>
+          <p class="card-text">Temperature: {{ weather.main.temp }}°F</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

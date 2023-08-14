@@ -1,0 +1,49 @@
+/* city-search.component.css */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* styles.css */
+.btn-primary:hover {
+  background-color: green; /* Change to the desired hover color */
+}
+
+.btn-secondary:hover {
+  background-color: red; /* Change to the desired hover color */
+}
+
+
+/* city-search.component.css */
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  margin-left: 1em; /* Adjust the margin as needed */
+}
+
+.input-group input.form-control:hover {
+  transform: scale(1.05); /* Increase size on hover */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+

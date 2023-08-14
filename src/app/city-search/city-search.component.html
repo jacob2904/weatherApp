@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input [(ngModel)]="searchQuery" class="form-control" placeholder="Enter a city" (keyup.enter)="searchCities()">
+        <div class="input-group-append">
+          <button class="btn btn-primary space-between" (click)="searchCities()">Search</button>
+          <button class="btn btn-secondary space-between" (click)="resetSearch()">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-city-grid [cities]="cities"></app-city-grid>
+
+<app-notification [isSuccess]=isSuccess [isVisible]=isVisible [message]=message></app-notification>

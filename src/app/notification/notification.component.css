@@ -1,0 +1,18 @@
+/* notification.component.css */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 300px; /* Adjust width as needed */
+}
+
+/* Add responsive styles here */
+@media (max-width: 576px) {
+  .notification-container {
+    width: 100%; /* Display full width on small screens */
+    right: 0;
+    bottom: 0;
+    top: unset;
+  }
+}

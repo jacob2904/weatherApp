@@ -1,0 +1,21 @@
+<app-spinner [isLoading$]="loadingService.isLoading$ | async"></app-spinner>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let city of cities">
+      <div class="card">
+        <img [src]="getCityImage(city)"
+             class="card-img-top" alt="{{ city?.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{city?.matching_full_name}}</h5>
+          <p class="card-text">Current Time: {{ getCurrentTime(city) }}</p>
+          <a routerLink= "/weatherForecast" [queryParams]="
+          {
+            citylat: city?._embedded?.['city:item']?.location?.latlon?.latitude,
+            citylon: city?._embedded?.['city:item']?.location?.latlon?.longitude
+          }" class="btn btn-primary">Weather Forecast</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

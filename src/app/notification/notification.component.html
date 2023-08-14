@@ -1,0 +1,8 @@
+<div class="notification-container">
+  <div [ngClass]="{'alert': true, 'alert-success': isSuccess, 'alert-danger': !isSuccess, 'alert-dismissible': true, 'fade': true, 'show': isVisible}" role="alert">
+    <button type="button" class="close" (click)="closeNotification()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
